@@ -1,6 +1,6 @@
 ## Nazdar!
 
-About Me
+👨‍💻 About Me
 
 I'm a Computer Science major at McGill University in Canada with a keen interest in Cybersecurity and Software Development. 
 Currently, I'm expanding my skills through:
