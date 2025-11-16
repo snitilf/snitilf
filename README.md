@@ -1,7 +1,12 @@
 ## Hackerman in Training
 
-**CompSci student @ McGill**. I break things ethically, dissect malware for fun, and code stuff that *might* crash. 
+**CompSci student** @ McGill. I break things ethically, dissect malware for fun, and code stuff that *might* crash. 
 
-**VP Tech**, athlete, head of marketing & *always posting myself on* **@mcgillcalisthenics**
+**Investment Specialist** @ BMO
 
-**VP Finance @mcgillcsus**
+**VP Tech** @mcgillcalisthenics
+
+**VP Finance** @mcgillcsus
+
+
+
