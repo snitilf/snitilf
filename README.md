@@ -4,9 +4,6 @@
 
 **Investment Specialist** @ BMO
 
-**VP Tech** @mcgillcalisthenics
-
 **VP Finance** @mcgillcsus
 
-
-
+**VP Tech** @mcgillcalisthenics
