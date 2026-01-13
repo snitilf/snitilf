@@ -1,2 +1,2 @@
 
-## **CompSci @ McGill**
+**CompSci @ McGill**
