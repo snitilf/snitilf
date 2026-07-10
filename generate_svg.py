@@ -2,7 +2,7 @@
 i know you want to copy this so here's what this does
 builds dark_mode.svg and light_mode.svg from ascii-art.txt and the info lines below
 
-usage: python3 generate_svg.py && python3 today.py
+usage: python3 generate_svg.py
 
 every card row is 60 monospace chars wide, so len(key) + len(value) <= 54 or the dots run out
 """
@@ -41,12 +41,6 @@ def info_line(y, key, value):
     return (f'<tspan x="390" y="{y}" class="cc">. </tspan>{key_spans(key)}:'
             f'<tspan class="cc">{seg}</tspan><tspan class="value">{html.escape(value)}</tspan>')
 
-def dyn_line(y, key, elem_id, placeholder, just):
-    seg = ' ' + '.' * (just - len(placeholder)) + ' '
-    return (f'<tspan x="390" y="{y}" class="cc">. </tspan>{key_spans(key)}:'
-            f'<tspan class="cc" id="{elem_id}_dots">{seg}</tspan>'
-            f'<tspan class="value" id="{elem_id}">{placeholder}</tspan>')
-
 def header_line(y, title):
     dashes = WIDTH - len(title) - 4
     return f'<tspan x="390" y="{y}">{title}</tspan> -{"—" * dashes}-—-'
@@ -57,15 +51,14 @@ def blank(y):
 def right_column():
     L = []
     L.append(header_line(30, '@snitilf'))
-    L.append(info_line(50, 'School', 'McGill University (CS)'))
-    L.append(info_line(70, 'Work', 'Ubisoft'))
-    # today.py updates this daily; keep 36 in sync with DOTS_BUDGET there
+    L.append(info_line(50, 'Work', 'Ubisoft (prev SunLife, BMO)'))
+    L.append(info_line(70, 'School', 'McGill University (CS)'))
     L.append(info_line(90, 'Location', 'Montreal, QC'))
-    L.append(dyn_line(110, 'Semesters.Remaining', 'semester_data', '2', 36))
+    L.append(info_line(110, 'BIXI.Stats', '1772km'))
     L.append(blank(130))
     L.append(info_line(150, 'OS', 'macOS Tahoe 26.5.1'))
     L.append(info_line(170, 'Shell', 'zsh wearing a bash costume'))
-    L.append(info_line(190, 'Uptime', '4 coffees a day'))
+    L.append(info_line(190, 'Uptime', '3 coffees a day'))
     L.append(info_line(210, 'Sleep', 'Segmentation fault'))
     L.append(info_line(230, 'Audio.Driver', 'Metalcore, rock, deep house'))
     L.append(blank(250))

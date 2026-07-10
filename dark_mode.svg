@@ -61,14 +61,14 @@ text, tspan {white-space: pre;}
 </text>
 <text x="390" y="30" fill="#c9d1d9">
 <tspan x="390" y="30">@snitilf</tspan> -————————————————————————————————————————————————-—-
-<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">School</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">McGill University (CS)</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Work</tspan>:<tspan class="cc"> ............................................ </tspan><tspan class="value">Ubisoft</tspan>
+<tspan x="390" y="50" class="cc">. </tspan><tspan class="key">Work</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Ubisoft (prev SunLife, BMO)</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">School</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">McGill University (CS)</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">Montreal, QC</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Semesters</tspan>.<tspan class="key">Remaining</tspan>:<tspan class="cc" id="semester_data_dots"> ................................... </tspan><tspan class="value" id="semester_data">2</tspan>
+<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">BIXI</tspan>.<tspan class="key">Stats</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">1772km</tspan>
 <tspan x="390" y="130" class="cc">. </tspan>
 <tspan x="390" y="150" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">macOS Tahoe 26.5.1</tspan>
 <tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Shell</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">zsh wearing a bash costume</tspan>
-<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">4 coffees a day</tspan>
+<tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">3 coffees a day</tspan>
 <tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Sleep</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Segmentation fault</tspan>
 <tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Audio</tspan>.<tspan class="key">Driver</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Metalcore, rock, deep house</tspan>
 <tspan x="390" y="250" class="cc">. </tspan>
