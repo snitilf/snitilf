@@ -70,7 +70,7 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Shell</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">zsh wearing a bash costume</tspan>
 <tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">4 coffees a day</tspan>
 <tspan x="390" y="210" class="cc">. </tspan><tspan class="key">Sleep</tspan>:<tspan class="cc"> ................................ </tspan><tspan class="value">Segmentation fault</tspan>
-<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Audio</tspan>.<tspan class="key">Driver</tspan>:<tspan class="cc"> ......................... </tspan><tspan class="value">Metalcore and Rock</tspan>
+<tspan x="390" y="230" class="cc">. </tspan><tspan class="key">Audio</tspan>.<tspan class="key">Driver</tspan>:<tspan class="cc"> ................ </tspan><tspan class="value">Metalcore, rock, deep house</tspan>
 <tspan x="390" y="250" class="cc">. </tspan>
 <tspan x="390" y="270" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> .... </tspan><tspan class="value">Python, TypeScript, Rust, Java</tspan>
 <tspan x="390" y="290" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Computer</tspan>:<tspan class="cc"> .......... </tspan><tspan class="value">HTML, CSS, SQL, LaTeX, Bash</tspan>
@@ -80,7 +80,7 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="370" class="cc">. </tspan>
 <tspan x="390" y="390">- Contact</tspan> -———————————————————————————————————————————————-—-
 <tspan x="390" y="410" class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">filip.snitil@mail.mcgill.ca</tspan>
-<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> .................... </tspan><tspan class="value">www.linkedin.com/in/snitilf</tspan>
+<tspan x="390" y="430" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">linkedin.com/in/snitilf</tspan>
 <tspan x="390" y="450" class="cc">. </tspan>
 <tspan x="390" y="470">- Currently</tspan> -—————————————————————————————————————————————-—-
 <tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Learning</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">LLM Fine-tuning, RLHF</tspan>
