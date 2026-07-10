@@ -45,9 +45,6 @@ def header_line(y, title):
     dashes = WIDTH - len(title) - 4
     return f'<tspan x="390" y="{y}">{title}</tspan> -{"—" * dashes}-—-'
 
-def blank(y):
-    return f'<tspan x="390" y="{y}" class="cc">. </tspan>'
-
 def right_column():
     L = []
     L.append(header_line(30, '@snitilf'))
@@ -55,23 +52,19 @@ def right_column():
     L.append(info_line(70, 'School', 'McGill University (CS)'))
     L.append(info_line(90, 'Location', 'Montreal, QC'))
     L.append(info_line(110, 'BIXI.Stats', '1772km'))
-    L.append(blank(130))
     L.append(info_line(150, 'OS', 'macOS Tahoe 26.5.1'))
     L.append(info_line(170, 'Shell', 'zsh wearing a bash costume'))
     L.append(info_line(190, 'Uptime', '3 coffees a day'))
     L.append(info_line(210, 'Sleep', 'Segmentation fault'))
     L.append(info_line(230, 'Audio.Driver', 'Metalcore, rock, deep house'))
-    L.append(blank(250))
     L.append(info_line(270, 'Languages.Programming', 'Python, TypeScript, Rust, Java'))
     L.append(info_line(290, 'Languages.Computer', 'HTML, CSS, SQL, LaTeX, Bash'))
     L.append(info_line(310, 'Languages.Real', 'English, Czech, French'))
     L.append(info_line(330, 'Hobbies.Software', 'Security, ML, Side Quests'))
     L.append(info_line(350, 'Hobbies.GrassTouching', 'Calisthenics, Bouldering, Running'))
-    L.append(blank(370))
     L.append(header_line(390, '- Contact'))
     L.append(info_line(410, 'Email', 'filip.snitil@mail.mcgill.ca'))
     L.append(info_line(430, 'LinkedIn', 'linkedin.com/in/snitilf'))
-    L.append(blank(450))
     L.append(header_line(470, '- Currently'))
     L.append(info_line(490, 'Learning', 'LLM Fine-tuning, RLHF'))
     L.append(info_line(510, 'Building', 'Whatever Fable 5 lets me build'))
