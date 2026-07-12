@@ -67,7 +67,7 @@ def right_column():
     L.append(info_line(430, 'LinkedIn', 'linkedin.com/in/snitilf'))
     L.append(header_line(470, '- Currently'))
     L.append(info_line(490, 'Learning', 'LLM Fine-tuning, RLHF'))
-    L.append(info_line(510, 'Building', 'Whatever Fable 5 lets me build'))
+    L.append(info_line(510, 'Building', 'Overengineered solutions to simple problems'))
     return '\n'.join(L)
 
 THEMES = {
