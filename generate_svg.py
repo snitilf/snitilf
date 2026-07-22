@@ -43,7 +43,8 @@ def info_line(y, key, value):
 
 def header_line(y, title):
     dashes = WIDTH - len(title) - 4
-    return f'<tspan x="390" y="{y}">{title}</tspan> -{"—" * dashes}-—-'
+    return (f'<tspan x="390" y="{y}" class="hdr">{title}</tspan>'
+            f'<tspan class="rule"> -{"—" * dashes}-—-</tspan>')
 
 def right_column():
     L = []
@@ -51,7 +52,7 @@ def right_column():
     L.append(info_line(50, 'Work', 'Ubisoft (prev SunLife, BMO)'))
     L.append(info_line(70, 'School', 'McGill University (CS)'))
     L.append(info_line(90, 'Location', 'Montreal, QC'))
-    L.append(info_line(110, 'BIXI.Stats', '1772km'))
+    L.append(info_line(110, 'BIXI.Stats', '1809km'))
     L.append(info_line(150, 'OS', 'macOS Tahoe 26.5.1'))
     L.append(info_line(170, 'Shell', 'zsh wearing a bash costume'))
     L.append(info_line(190, 'Uptime', '3 coffees a day'))
@@ -67,14 +68,30 @@ def right_column():
     L.append(info_line(430, 'LinkedIn', 'linkedin.com/in/snitilf'))
     L.append(header_line(470, '- Currently'))
     L.append(info_line(490, 'Learning', 'LLM Fine-tuning, RLHF'))
-    L.append(info_line(510, 'Building', 'Overengineered solutions to simple problems'))
+    L.append(info_line(510, 'Building', 'Nordet (coming soon)'))
     return '\n'.join(L)
 
+# graphite - a pure neutral ramp, chroma 0 everywhere. hierarchy comes only from
+# lightness, so the eye lands value -> key -> art -> leaders in that order.
+#
+# on the card edge: github's dark canvases (#010409 high contrast, #0d1117 default,
+# #212830 soft dark) all sit at relative luminance .001-.021, so no near-black fill
+# can clear even 1.1:1 against them. the 1px border is what makes this read as an
+# object on every theme - it holds 1.85-2.01:1 against all three.
 THEMES = {
-    'dark_mode.svg': dict(bg='#161b22', fg='#c9d1d9', key='#ffa657', value='#a5d6ff',
-                          add='#3fb950', dele='#f85149', cc='#616e7f'),
-    'light_mode.svg': dict(bg='#f6f8fa', fg='#24292f', key='#953800', value='#0a3069',
-                           add='#1a7f37', dele='#cf222e', cc='#c2cfde'),
+    'dark_mode.svg': dict(bg='#0c0c0b', border='#434041', hdr='#f5f5f5', rule='#303030',
+                          key='#989898', value='#ebebeb', cc='#353535',
+                          # dark mode inverts glyph density, so the art already has
+                          # a wide tonal range - one fill plus a soft vertical
+                          # falloff is enough.
+                          art=('#bebebd', '#717171'), art_tone=None),
+    'light_mode.svg': dict(bg='#f7f7f7', border='#d1d1d1', hdr='#2e2e2e', rule='#cccccc',
+                           key='#707070', value='#2a2a2a', cc='#c6c5c5',
+                           # light mode does NOT invert, so every glyph in the crop
+                           # is heavy ink (no spaces or dots at all) and the face
+                           # flattens into a slab. tone each glyph by its density
+                           # instead, which restores the portrait.
+                           art=None, art_tone=('#eeeeee', '#0b0b0b')),
 }
 
 TEMPLATE = '''<?xml version='1.0' encoding='UTF-8'?>
@@ -87,35 +104,63 @@ font-display: swap;
 -webkit-size-adjust: 109%;
 size-adjust: 109%;
 }}
+.hdr {{fill: {hdr}; font-weight: bold;}}
+.rule {{fill: {rule};}}
 .key {{fill: {key};}}
 .value {{fill: {value};}}
-.addColor {{fill: {add};}}
-.delColor {{fill: {dele};}}
 .cc {{fill: {cc};}}
 text, tspan {{white-space: pre;}}
 </style>
-<rect width="985px" height="530px" fill="{bg}" rx="15"/>
-<text x="15" y="30" fill="{fg}" class="ascii" font-size="{ascii_font}px">
+{defs}<rect x="0.5" y="0.5" width="984" height="529" rx="14.5" fill="{bg}" stroke="{border}" stroke-width="1"/>
+<text x="15" y="30" fill="{art_fill}" font-size="{ascii_font}px">
 {ascii_block}
 </text>
-<text x="390" y="30" fill="{fg}">
+<text x="390" y="30" fill="{value}">
 {right}
 </text>
 </svg>
 '''
 
+GRAD = ('<defs><linearGradient id="a" x1="0" y1="0" x2="0.35" y2="1">'
+        '<stop offset="0" stop-color="{0}"/><stop offset="1" stop-color="{1}"/>'
+        '</linearGradient></defs>\n')
+
+def lerp_hex(a, b, t):
+    a, b = a.lstrip('#'), b.lstrip('#')
+    return '#' + ''.join(f'{round(int(a[i:i+2],16)+(int(b[i:i+2],16)-int(a[i:i+2],16))*t):02x}'
+                         for i in (0, 2, 4))
+
+def tone_runs(line, y, sparse, dense):
+    """one tspan per run of equal glyph, toned by where that glyph sits on RAMP"""
+    out, i = [], 0
+    while i < len(line):
+        j = i
+        while j < len(line) and line[j] == line[i]:
+            j += 1
+        fill = lerp_hex(sparse, dense, RAMP.index(line[i]) / (len(RAMP) - 1))
+        out.append(f'<tspan fill="{fill}">{line[i] * (j - i)}</tspan>')
+        i = j
+    return f'<tspan x="15" y="{y:g}">' + ''.join(out) + '</tspan>'
+
 if __name__ == '__main__':
     art = ascii_art()
     y0 = (530 - len(art) * ASCII_STEP) / 2 + ASCII_FONT - 2
 
-    def art_block(lines):
-        return '\n'.join(f'<tspan x="15" y="{y0 + i * ASCII_STEP:g}">{line}</tspan>'
-                         for i, line in enumerate(lines))
-
     right = right_column()
     for name, t in THEMES.items():
+        t = dict(t)
         lines = invert_art(art) if name.startswith('dark') else art
+        tone = t.pop('art_tone')
+        grad = t.pop('art')
+        if tone:
+            block = '\n'.join(tone_runs(l, y0 + i * ASCII_STEP, *tone)
+                              for i, l in enumerate(lines))
+            defs, art_fill = '', tone[1]
+        else:
+            block = '\n'.join(f'<tspan x="15" y="{y0 + i * ASCII_STEP:g}">{l}</tspan>'
+                              for i, l in enumerate(lines))
+            defs, art_fill = GRAD.format(*grad), 'url(#a)'
         with open(os.path.join(OUT_DIR, name), 'w', encoding='utf-8') as f:
-            f.write(TEMPLATE.format(ascii_block=art_block(lines), right=right,
-                                    ascii_font=ASCII_FONT, **t))
+            f.write(TEMPLATE.format(ascii_block=block, right=right, defs=defs,
+                                    art_fill=art_fill, ascii_font=ASCII_FONT, **t))
     print('wrote dark_mode.svg and light_mode.svg')

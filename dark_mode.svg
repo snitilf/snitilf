@@ -8,15 +8,16 @@ font-display: swap;
 -webkit-size-adjust: 109%;
 size-adjust: 109%;
 }
-.key {fill: #ffa657;}
-.value {fill: #a5d6ff;}
-.addColor {fill: #3fb950;}
-.delColor {fill: #f85149;}
-.cc {fill: #616e7f;}
+.hdr {fill: #f5f5f5; font-weight: bold;}
+.rule {fill: #303030;}
+.key {fill: #989898;}
+.value {fill: #ebebeb;}
+.cc {fill: #353535;}
 text, tspan {white-space: pre;}
 </style>
-<rect width="985px" height="530px" fill="#161b22" rx="15"/>
-<text x="15" y="30" fill="#c9d1d9" class="ascii" font-size="12px">
+<defs><linearGradient id="a" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#bebebd"/><stop offset="1" stop-color="#717171"/></linearGradient></defs>
+<rect x="0.5" y="0.5" width="984" height="529" rx="14.5" fill="#0c0c0b" stroke="#434041" stroke-width="1"/>
+<text x="15" y="30" fill="url(#a)" font-size="12px">
 <tspan x="15" y="49.5">=====-----------===++========--==-------..........</tspan>
 <tspan x="15" y="60.5">====---============++==-==----.-----==--------+--.</tspan>
 <tspan x="15" y="71.5">---=--.-----------.... .    .-..--.-----------=--.</tspan>
@@ -59,12 +60,12 @@ text, tspan {white-space: pre;}
 <tspan x="15" y="478.5">               -=*++**=. .     .---+++--</tspan>
 <tspan x="15" y="489.5">               .-+**====.     .---=+++-.</tspan>
 </text>
-<text x="390" y="30" fill="#c9d1d9">
-<tspan x="390" y="30">@snitilf</tspan> -————————————————————————————————————————————————-—-
+<text x="390" y="30" fill="#ebebeb">
+<tspan x="390" y="30" class="hdr">@snitilf</tspan><tspan class="rule"> -————————————————————————————————————————————————-—-</tspan>
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">Work</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Ubisoft (prev SunLife, BMO)</tspan>
 <tspan x="390" y="70" class="cc">. </tspan><tspan class="key">School</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">McGill University (CS)</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">Montreal, QC</tspan>
-<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">BIXI</tspan>.<tspan class="key">Stats</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">1772km</tspan>
+<tspan x="390" y="110" class="cc">. </tspan><tspan class="key">BIXI</tspan>.<tspan class="key">Stats</tspan>:<tspan class="cc"> ....................................... </tspan><tspan class="value">1809km</tspan>
 <tspan x="390" y="150" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ................................... </tspan><tspan class="value">macOS Tahoe 26.5.1</tspan>
 <tspan x="390" y="170" class="cc">. </tspan><tspan class="key">Shell</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">zsh wearing a bash costume</tspan>
 <tspan x="390" y="190" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc"> .................................. </tspan><tspan class="value">3 coffees a day</tspan>
@@ -75,11 +76,11 @@ text, tspan {white-space: pre;}
 <tspan x="390" y="310" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ................... </tspan><tspan class="value">English, Czech, French</tspan>
 <tspan x="390" y="330" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">Software</tspan>:<tspan class="cc"> .............. </tspan><tspan class="value">Security, ML, Side Quests</tspan>
 <tspan x="390" y="350" class="cc">. </tspan><tspan class="key">Hobbies</tspan>.<tspan class="key">GrassTouching</tspan>:<tspan class="cc"> . </tspan><tspan class="value">Calisthenics, Bouldering, Running</tspan>
-<tspan x="390" y="390">- Contact</tspan> -———————————————————————————————————————————————-—-
+<tspan x="390" y="390" class="hdr">- Contact</tspan><tspan class="rule"> -———————————————————————————————————————————————-—-</tspan>
 <tspan x="390" y="410" class="cc">. </tspan><tspan class="key">Email</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">filip.snitil@mail.mcgill.ca</tspan>
 <tspan x="390" y="430" class="cc">. </tspan><tspan class="key">LinkedIn</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">linkedin.com/in/snitilf</tspan>
-<tspan x="390" y="470">- Currently</tspan> -—————————————————————————————————————————————-—-
+<tspan x="390" y="470" class="hdr">- Currently</tspan><tspan class="rule"> -—————————————————————————————————————————————-—-</tspan>
 <tspan x="390" y="490" class="cc">. </tspan><tspan class="key">Learning</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="value">LLM Fine-tuning, RLHF</tspan>
-<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Building</tspan>:<tspan class="cc"> .... </tspan><tspan class="value">Overengineered solutions to simple problems</tspan>
+<tspan x="390" y="510" class="cc">. </tspan><tspan class="key">Building</tspan>:<tspan class="cc"> ........................... </tspan><tspan class="value">Nordet (coming soon)</tspan>
 </text>
 </svg>
