@@ -52,7 +52,7 @@ def right_column():
     L.append(info_line(50, 'Work', 'Ubisoft (prev SunLife, BMO)'))
     L.append(info_line(70, 'School', 'McGill University (CS)'))
     L.append(info_line(90, 'Location', 'Montreal, QC'))
-    L.append(info_line(110, 'BIXI.Stats', '1809km'))
+    L.append(info_line(110, 'BIXI.Stats', '2114km'))
     L.append(info_line(150, 'OS', 'macOS Tahoe 26.5.1'))
     L.append(info_line(170, 'Shell', 'zsh wearing a bash costume'))
     L.append(info_line(190, 'Uptime', '3 coffees a day'))
@@ -68,7 +68,7 @@ def right_column():
     L.append(info_line(430, 'LinkedIn', 'linkedin.com/in/snitilf'))
     L.append(header_line(470, '- Currently'))
     L.append(info_line(490, 'Learning', 'LLM Fine-tuning, RLHF'))
-    L.append(info_line(510, 'Building', 'Nordet (coming soon)'))
+    L.append(info_line(510, 'Building', 'Nordet'))
     return '\n'.join(L)
 
 # graphite - a pure neutral ramp, chroma 0 everywhere. hierarchy comes only from
